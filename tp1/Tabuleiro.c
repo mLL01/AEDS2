@@ -358,5 +358,5 @@ void Cria_Velha(int modo){
 				break;
 			} 
 		}
-	}
+	} // continua ...
 }
