@@ -204,7 +204,7 @@ int Verifica_Final(Array** Lista_Adjacencia, int n_vertices){
 // basicamente quando se quer marcar um elemento Y de uma lista do Array X
 // se procura o elemento X dentro de uma outras listas que nao seja a com o Array indexado por Y
 // se acharmos o X, entao ele forma um laco e nao pode ser marcado
-// caso nao achemos ele pode ser marcado -> forma uma aresta com Y
+// se nao o encontrarmos, entao ele pode ser marcado -> forma uma aresta com Y
 int Busca_Array(Array** Lista_Adjacencia, int elemento_in, int elemento_out, int n_vertices, int anterior){
 	for (int j = 0; j < n_vertices; j++) {
 		No* aux = Lista_Adjacencia[j]->head;
