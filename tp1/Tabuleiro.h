@@ -2,12 +2,10 @@
 #define Cabecalho_h
 
 typedef struct{
-
 	int n_linhas;
 	int n_colunas;
 	char matriz[10][10];
-
-} Tabuleiro;
+}Tabuleiro;
 
 void SetTamanho(Tabuleiro *T, int n);
 void SetElemento(Tabuleiro *T, int i, int j, char c);
