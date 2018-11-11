@@ -44,11 +44,11 @@ void Cria_No(Array* Lista_Adjacencia, Aresta* aresta, int edge){
 	no->peso = aresta->peso_a;
 	no->marcado = 0;
 	no->prox = NULL;
-	if (Lista_Adjacencia->head == NULL)
+	if (!Lista_Adjacencia->head)
 		Lista_Adjacencia->head = no;
 	else {
 		aux = Lista_Adjacencia->head;
-		while (Lista_Adjacencia->head->prox != NULL)
+		while (Lista_Adjacencia->head->prox)
 			Lista_Adjacencia->head = Lista_Adjacencia->head->prox;
 		Lista_Adjacencia->head->prox = no;
 		Lista_Adjacencia->head = aux;
@@ -85,7 +85,7 @@ void Adiciona_Aresta(Aresta* aresta, int v_i, int v_j, int peso){
 	aux->v_x = v_i;
 	aux->v_y = v_j;
 	aux->peso_a = peso;
-	while (aresta->prox != NULL)
+	while (aresta->prox)
 		aresta = aresta->prox;
 	aresta->prox = aux;
 }
@@ -249,7 +249,7 @@ void Marca_Complemento(Array** Lista_Adjacencia, int vertice_out, int n_vertices
 No* Menor_Peso(Array** Lista_Adjacencia, int n_vertices, int* linha){
 	No* aux;
 	No* menor = (No*)malloc(sizeof(No));
-	menor->peso = 10000000;
+	menor->peso = 10000000; //valor aleatorio muito grande
 	for (int i = 0; i < n_vertices; i++) {
 		aux = Lista_Adjacencia[i]->head;
 		while (Lista_Adjacencia[i]->head) {
@@ -324,4 +324,3 @@ int main(int argc, char const* argv[]){
 	Processa_Arquivo(argv);
 	return 0;
 }
- 
