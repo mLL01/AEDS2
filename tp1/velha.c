@@ -4,7 +4,6 @@
 
 int main(int argc, const char *argv[]){
 	Cria_Velha(1);	
-
 	return 0;
 }
 
