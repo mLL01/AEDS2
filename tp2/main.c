@@ -309,9 +309,8 @@ void Processa_Arquivo(const char **argv){
 	Cria_Array(Lista_Adjacencia,n_vertices);
 	fscanf(arq,"%d %d %d", &vertice_i, &vertice_j, &peso);
 	aresta->v_x = vertice_i; aresta->v_y = vertice_j; aresta->peso_a = peso;
-	while (fscanf(arq,"%d %d %d", &vertice_i, &vertice_j, &peso)!=EOF){
+	while (fscanf(arq,"%d %d %d", &vertice_i, &vertice_j, &peso)!=EOF)
 		Adiciona_Aresta(aresta,vertice_i,vertice_j,peso);
-	}
 	Cria_Lista(Lista_Adjacencia,aresta,n_vertices);
 	while (!(Verifica_Final(Lista_Adjacencia,n_vertices)))
 		Marca_No(Lista_Adjacencia,n_vertices);
