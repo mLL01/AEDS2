@@ -318,7 +318,6 @@ void Processa_Arquivo(const char **argv){
 	n_arestas = Cont_Arestas(Lista_Adjacencia,n_vertices);
 	imprime(Lista_Adjacencia,n_vertices,n_arestas,out);
 }
-
 int main(int argc, char const* argv[]){
 	Processa_Arquivo(argv);
 	return 0;
