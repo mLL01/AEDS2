@@ -360,4 +360,3 @@ void Cria_Velha(int modo){
 		}
 	} // continua ...
 }
-
